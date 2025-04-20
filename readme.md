@@ -1,4 +1,4 @@
-# 📚 My Full Stack Development Learnings
+#  My Full Stack Development Learnings
 
 Welcome to my learning repository!
 
@@ -6,7 +6,7 @@ This is where I document and store all the code, notes, and exercises from my jo
 
 ---
 
-## ✅ What I’ve Learned So Far
+##  What I’ve Learned So Far
 
 - **HTML**
     - Semantic elements
@@ -23,23 +23,21 @@ This is where I document and store all the code, notes, and exercises from my jo
   - Objects, JSON, and Local Storage Interaction
 ---
 
-## 🚧 Currently Learning
+## Currently Learning
 
 - **DOM Manipulation**
     - Accessing and modifying HTML elements
     - Event listeners and interactions
-    - 
-
 ---
 
-## 📝 Exercises
+##  Exercises
 
 I’ve included practice exercises to reinforce what I’m learning.  
 Some of these are based on or directly copied from [SuperSimpleDev](https://supersimple.dev)'s learning materials. These are organized by topic in their respective folders.
 
 ---
 
-## 🛠️ Future Learning Plans
+## 🛠 Future Learning Plans
 
 As I progress, I will expand this repository to include new technologies and skills:
 
@@ -63,7 +61,7 @@ As I progress, I will expand this repository to include new technologies and ski
 
 ---
 
-## 🚀 Stay Tuned
+##  Stay Tuned
 
 This repository will evolve as I continue to grow.  
 Feel free to explore, clone, or learn with me!
