@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --background: rgba(0, 0, 0, 0.8);
+}
+
+body {
+    font-family: system-ui;
+}
+
+.btn {
+    font: inherit;
+
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+
+    border: none;
+
+    background: black;
+    color: white;
+    font-weight: 500;
+}
+
+#open-modal {
+    margin: 1rem;
+}
+
+.btn:hover {
+    background: var(--background);
+    cursor: pointer;
+}
+
+dialog {
+    margin: auto;
+    padding: 1rem 2rem;
+
+    border: none;
+    border-radius: 6px;
+
+    opacity: 0;
+    transition: all 0.3s allow-discrete;
+}
+
+dialog[open] {
+    opacity: 1;
+}
+
+@starting-style {
+    dialog[open] {
+        opacity: 0;
+    }
+}
+
+dialog::backdrop {
+    opacity: 0;
+    transition: all 0.3s allow-discrete;
+
+    background: rgba(0,0,0,0);
+}
+
+dialog[open]::backdrop {
+    background-color: var(--background);
+    opacity: 1;
+}
+
+@starting-style {
+    dialog[open]::backdrop {
+        opacity: 0;
+        background: rgba(0,0,0,0);
+
+    }
+}
+.description {
+    max-width: 40ch;
+}

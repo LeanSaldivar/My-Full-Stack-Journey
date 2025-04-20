@@ -1,0 +1,73 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.container {
+    margin: 10px;
+}
+
+.form-control label{
+    font-size: 36px;
+}
+
+.form-control input{
+    display: block;
+    padding: 10px 0 10px 10px;
+    width: 50%;
+    margin: 10px 0 10px 0;
+    border: none;
+    background-color: #eeeeee;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+#pickupLocation {
+    margin-top: 20px;
+}
+
+#destination {
+    margin-bottom: 20px;
+}
+
+.form-control input:focus{
+    outline: 2px solid #25539e;
+}
+
+.form-control button{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px 5px 10px 5px;
+    margin: 0 2px;
+    width: 25%;
+}
+
+#request {
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+}
+
+#request:hover {
+    background-color: #222121;
+    cursor: pointer;
+}
+
+#schedule {
+    border: none;
+    background-color: #eeeeee;
+    color: black;
+    font-size: 14px;
+}
+
+#schedule:hover {
+    background-color: #bab6b6;
+    cursor: pointer;
+
+}

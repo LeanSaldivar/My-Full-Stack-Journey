@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!-- Div is the parent node -->
+<div id="container">
+    <!-- Everything inside the DOM is a child node of this div -->
+
+    <!-- p elements with class="class" are siblings -->
+    <p class="class" id="message">JavaScript DOM</p> <!-- 1st Sibling -->
+    <p class="class">JavaScript DOM</p>               <!-- 2nd Sibling -->
+    <p class="class">JavaScript DOM</p>               <!-- 3rd Sibling -->
+    <p class="class">JavaScript DOM</p>               <!-- 4th Sibling -->
+
+    <!-- Radio buttons with the same 'name' attribute -->
+    <input type="radio" name="language" value="Javascript">
+    <input type="radio" name="language" value="Python">
+    <input type="radio" name="language" value="Java">
+    <input type="radio" name="language" value="C++">
+    <input type="radio" name="language" value="C#">
+
+    <!-- Elements with class 'style' -->
+    <h1 class="style">First Heading</h1>
+    <h2 class="style">Second Heading</h2>
+    <h3 class="style">Third Heading</h3>
+    <h4 class="style">Fourth Heading</h4>
+</div>
+
+<!-- This <p> is NOT inside #container -->
+<p class="class">Outside of parent</p>
+
+<!-- Section tag containing heading and paragraph -->
+<section>
+    <h1 class="section-heading">Section Heading</h1>
+    <h1 class="section-heading">Section Heading</h1>
+    <h1 class="section-heading">Section Heading</h1>
+    <h1 class="section-heading">Section Heading</h1>
+    <p class="section-heading">Section paragraph</p>
+</section>
+
+<!-- Link to external JS file -->
+<script src="select.js"></script>
+</body>
+</html>

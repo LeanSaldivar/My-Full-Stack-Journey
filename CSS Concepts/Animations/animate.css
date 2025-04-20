@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 5rem;
+
+    margin : 1rem;
+}
+
+.button {
+    display: flex;
+}
+
+.learn-more {
+    font-style: inherit;
+
+    font-size: 1.2rem;
+    padding: 0.5em 1em;
+
+    background-color: #ffc4c4;
+    color: red;
+
+    border: solid 3px red;
+
+    /* Animation can be controlled by this */
+    /*transition-property: transform; !* defines which property should animate *!*/
+    /*transition-duration: 0.9s; !* Defines how long the animation lasts *!*/
+    /*transition-timing-function: linear; !* Defines the acceleration curve of the transition *!*/
+    /*transition-delay: 0.5s; !* defines the delay before the transition moves *!*/
+
+    /*short hand for transition */
+    transition: all 0.5s;
+}
+
+/* Transition */
+.learn-more:hover {
+    background-color: #f64242;
+    transform: translateY(-10px);
+    color: white;
+
+    cursor: pointer;
+}
+
+/* Animations */
+
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-300px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+.slideInLeft {
+    /*animation-name: slideInLeft; !* Used for selecting the variable for the keyframe *!*/
+    /*animation-duration: 1s; !* Defines duration of the animation *!*/
+    /*animation-timing-function: linear;*/
+    /*animation-delay: -0.4s;*/
+    /*animation-iteration-count: 1;*/
+    /*animation-direction: normal;*/
+    /*animation-fill-mode: backwards;*/
+
+    animation: slideInLeft 1s;
+}

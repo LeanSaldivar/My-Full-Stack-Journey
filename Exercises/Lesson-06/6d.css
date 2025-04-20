@@ -1,0 +1,16 @@
+body {
+    font-family: Montserrat, "Helvetica Neue", sans-serif;
+    text-align: center;
+}
+
+#header {
+    font-size: 60px;
+}
+
+#txt {
+    font-size: 30px;
+}
+
+.underline {
+    text-decoration: underline;
+}

@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.container p, button {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+p {
+    margin: 10px 0 10px 10px;
+    width: 230px;
+}
+
+button {
+    padding: 0 5px 0 5px;
+}

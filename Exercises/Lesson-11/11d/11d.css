@@ -1,0 +1,107 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+    gap: 10px;
+}
+
+.box {
+    display: grid;
+
+    grid-template-columns: 185px;
+    grid-template-rows:  125px 20px 35px auto;
+
+    grid-template-areas:
+    'profile-picture'
+    'profile-name'
+    'mutual-friend'
+    'Add-friend';
+
+    margin: 5px;
+    padding-bottom: 10px;
+
+    width: 100%;
+    max-width: 185px;
+
+    border: none;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.6);
+}
+
+.extra-info {
+    display: grid;
+    grid-template-columns: 25px auto;
+    grid-template-rows: none;
+
+    grid-template-areas:
+    'pic name' ;
+
+    justify-items: self-start; /* Overrides Justify-items */
+    align-items: center; /* Override align-items */
+}
+
+.profile-picture {
+    align-self: start;
+
+    grid-area: profile-picture;
+    width: 100%;  /* Ensures full width */
+    height: 100%; /* Ensures it matches row height */
+    object-fit: cover; /* Prevents distortion, crops excess */
+}
+
+
+.profile{
+    grid-area: profile-name;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 -8px 10px;
+}
+
+.mutual-friend {
+    grid-area: pic;
+    width: 100%;
+    max-width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    margin: 0 0 -2px 10px;
+
+}
+
+.friend {
+    grid-area: name;
+    font-size: 12px;
+    color: #797979;
+    margin: 0 0 -2px 15px;
+}
+
+.add-friend {
+    grid-area: Add-friend;
+    border: none;
+    background-color: #3974e7;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+
+    margin-left: 10px;
+    padding: 5px 15px 5px 15px;
+
+    justify-self: self-start; /* Overrides Justify-items */
+    align-self: center; /* Override align-items */
+}
+
+.add-friend:hover {
+    background-color: #376ed8;
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}

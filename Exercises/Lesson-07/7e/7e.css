@@ -1,0 +1,16 @@
+
+#searchBar {
+    display: block;
+    font-size: 14px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    border-radius: 30px;
+    border: none;
+    box-shadow:0 0 2px 1px rgba(34, 34, 34, 0.3);
+}
+
+#searchBar:focus {
+    outline: 2px solid rgba(34, 34, 34, 0.5); /* Keeps focus but makes it subtle */
+}

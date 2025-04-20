@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 100%;
+}
+
+.formControl {
+    color: #626263;
+}
+
+.formControl label{
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.formControl p {
+    font-size: 18px;
+}
+
+.formControl input {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding: 10px;
+}
+
+#email {
+    width: 25%;
+    border: solid 1px #626263;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+#agree {
+    border:hidden;
+    border-radius: 30px;
+    background-color: #2c62ba;
+    padding: 20px 160px 20px 160px;
+    margin-top: 5px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+#agree:hover {
+    background-color: #25539e;
+    cursor: pointer;
+}
+
+#email:focus, #agree:focus {
+    outline: 2px solid #25539e;
+}
+

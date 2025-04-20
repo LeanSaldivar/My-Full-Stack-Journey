@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: grid;
+    margin: 10px;
+    grid-template-rows: repeat(6, 100px); /* Repeats row 6 times with 100 px size */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Keeps it responsive */
+    grid-gap: 1em 3em;
+
+    /* Fix: Ensure each row has 3 columns */
+    grid-template-areas:
+        "header header header"
+        "navbar main aside"
+        "navbar main aside"
+        "navbar main aside"
+        "footer footer footer";
+
+    justify-items: center;
+    align-items: center;
+}
+
+.item-1 {
+    grid-area: navbar;
+    background-color: lightblue;
+    justify-self: stretch; /* Overrides Justify-items */
+    align-self: stretch; /* Override align-items */
+    text-align: center;
+    padding: 10px;
+}
+
+.item-2 {
+    grid-area: main;
+    background-color: lightcoral;
+    position: relative;
+    z-index: 1;
+    justify-self: stretch; /* Overrides Justify-items */
+    align-self: stretch; /* Override align-items */
+}
+
+.item-3 {
+    grid-area: footer;
+    background-color: lightgreen;
+    justify-self: stretch; /* Overrides Justify-items */
+    align-self: stretch; /* Override align-items */
+}
+

@@ -1,0 +1,93 @@
+/* BASE STYLES */
+
+:root {
+    --clr-dark: #0f172a;
+    --clr-light: #f1f5f9;
+    --clr-accent: #e11d48;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6em;
+    word-spacing: 0.2em;
+    font-family: 'Roboto', sans-serif;
+    color: var(--clr-dark);
+    background-color: var(--clr-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+
+    max-width: 800px;
+    max-height: 700px;
+
+    margin: 0 auto;
+    border: 10px solid var(--clr-dark);
+}
+
+.item {
+    width: 150px;
+    height: 150px;
+    background-color: #fb7185;
+    padding: 1em;
+    font-weight: 700;
+    text-align: center;
+    border: 10px solid var(--clr-accent);
+    border-radius: 10px;
+}
+
+/* END OF BASE STYLES */
+
+.container {
+    display: flex;
+    /* Flex direction is row (horizontal) by default */
+    /* flex-direction: column; */
+    justify-content: center; /* X-axis if row otherwise Y axis if Column */
+    align-items: center;  /* Y-axis if row otherwise X axis if Column */
+
+    flex-wrap: wrap; /* makes it responsive */
+    /* Only works if flex-wrap is set to wrap */
+    align-content: flex-start; /* Align-items becomes null */
+}
+
+.item-1 {
+    flex-grow: 1; /* Allows item to grow if there's room to do so */
+    order: 1;
+
+}
+
+.item-2 {
+    flex-shrink: 3; /*Defines how fast an element shrinks*/
+    flex-basis: 100px; /* Overrides size of element */
+}
+
+.item-3 {
+    flex-grow: 1;
+    justify-self: stretch;
+    align-self: flex-end;
+}
+
+/* 6: 39 */
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+}
+
+.container {
+    margin: 5px;
+}
+
+
+.form-control input {
+    margin: 5px 1px 5px 5px;
+    border-radius: 10px;
+    border: solid 1px #CCCCCC;
+}
+
+.form-control button {
+    margin: 5px;
+}
+
+.form-control input:focus {
+    box-shadow: 0 0 5px #25539e;
+    border-color: #25539e;
+}
+
+
+input::placeholder {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+#fName, #lName {
+    display: inline-block;
+    width: 142px;
+    padding: 15px 5px 15px 15px;
+
+}
+
+#email {
+    display: block;
+    width: 310px;
+    padding: 15px 10px 15px 15px;
+    margin-bottom: 10px;
+
+}
+
+#signUp {
+    display: block;
+    border: none;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background: #3873e7;
+    color: #fff;
+    width: 340px;
+    border-radius: 10px;
+    padding: 15px 10px 15px 15px;
+    text-align: center;
+}
+
+#signUp:hover {
+    background: #3264ca;
+    cursor: pointer;
+}

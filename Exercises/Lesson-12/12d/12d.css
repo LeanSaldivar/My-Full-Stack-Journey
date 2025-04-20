@@ -1,0 +1,21 @@
+body {
+    font-family: "Comic Sans MS", "Helvetica", "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6em;
+}
+
+.container {
+    display: flex;
+
+    border: solid 1px gray;
+
+    margin: 5px;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item {
+    background-color: lightpink;
+}

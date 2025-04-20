@@ -1,0 +1,23 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    grid-template-rows: repeat(2, minmax(100px, 1fr));
+
+    column-gap: 20px;
+    row-gap: 10px;
+}
+
+.column {
+    background-color: #f1b8bf;
+    text-align: center;
+}
+
+@media (max-width: 600px)  {
+    .container {
+        display: block;
+    }
+
+    .column {
+        margin: 30px;
+    }
+}
