@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event</title>
+    <style>
+        .event-box {
+            width: 250px;
+            height: 60px;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #e0f7fa;
+            border: 1px solid #00acc1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #scroll-box {
+            width: 300px;
+            height: 100px;
+            overflow: auto;
+            border: 1px solid black;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div id="mousedown-box" class="event-box">Mouse Down</div>
+    <div id="mouseup-box" class="event-box">Mouse Up</div>
+    <div id="mouseover-box" class="event-box">Mouse Over</div>
+    <div id="mouseout-box" class="event-box">Mouse Out</div>
+
+    <input type="text" id="keydown-box" placeholder="Key Down" class="event-box" />
+    <input type="text" id="keyup-box" placeholder="Key Up" class="event-box" />
+    <input type="text" id="keypress-box" placeholder="Key Press" class="event-box" />
+
+    <div id="scroll-box">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tempus elit sit amet urna fermentum, vel dapibus mauris condimentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non commodo eros.</p>
+    </div>
+
+    <button type="button" id="button2">Click me
+    </button>
+</div>
+
+<script src="event.js"></script>
+
+</body>
+</html>
