@@ -1,4 +1,4 @@
-import {companies, ages} from "../high.js";
+import {companies} from "../high.js";
 
 /**
  * forEach - Perform an action for each element in an array.
@@ -13,7 +13,7 @@ for (let i = 0; i < companies.length; i++) {
     console.log(companies[i]);
 }
 
-//Enchanced for loop (for each)
+//Enhanced for loop (for each)
 companies.forEach(companies => {
     console.log(companies);
 });
