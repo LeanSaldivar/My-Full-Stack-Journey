@@ -13,6 +13,8 @@ function getName() {
     }
 }
 
+
+
 //Form input
 nameForm.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
