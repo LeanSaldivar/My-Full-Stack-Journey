@@ -14,13 +14,14 @@ const list = document.createElement('ul');
 // Add the list container to the DOM
 document.body.appendChild(list);
 
+let newPosts;
+
 /**
  * Retrieves and displays posts with a deliberate delay to simulate API call
  * @param {HTMLElement} listElement - The DOM element to render posts into
  */
 function getPosts(listElement) {
     console.log('🔍 Fetching posts...');
-
     try {
         setTimeout(() => {
             let output = '';
@@ -37,22 +38,39 @@ function getPosts(listElement) {
 }
 
 /**
- * Creates a new post and executes a callback function after completion
+ * Creates a new post using Promise syntax
  * @param {Object} post - The post object to be created
- * @param {Function} callback - Function to be executed after post creation
+ * @returns {Promise} - Promise that resolves with the created post or rejects with an error
  */
-function createNewPost(post, callback) {
+function createNewPost(post) {
     console.log('📝 Creating new post...');
+    console.log(`📊 Current post count: ${posts.length}`);
 
-    setTimeout(() => {
-        posts.push(post);
-        console.log(`✅ Post "${post.title}" created successfully`);
-        alert('Post created');
+    return new Promise((resolve, reject) => {
+        console.log('⏳ Promise initiated, waiting for post creation...');
 
-        // Execute the callback function (getPosts) after creating the post
-        console.log('🔄 Executing callback to refresh posts...');
-        callback(list);
-    }, 2000); // Simulated 2-second creation delay
+        setTimeout(() => {
+            try {
+                posts.push(post);
+                console.log(`✅ Post "${post.title}" created successfully`);
+                console.log(`📊 New post count: ${posts.length}`);
+
+                const error = false; // Simulated error condition
+
+                if (!error) {
+                    console.log('✅ No errors detected, resolving promise...');
+                    alert('Post created');
+                    resolve(post);
+                } else {
+                    console.error('❌ Error detected, rejecting promise...');
+                    reject('Error creating post');
+                }
+            } catch (err) {
+                console.error(`❌ Unexpected error: ${err.message}`);
+                reject(`Unexpected error: ${err.message}`);
+            }
+        }, 2000); // Simulated 2-second creation delay
+    });
 }
 
 // --- Event Listeners ---
@@ -68,10 +86,25 @@ hidePost.addEventListener('click', () => {
 
 createPost.addEventListener('click', () => {
     console.log('🖱️ Create post button clicked');
-    const newPost = {
+    let newPost = {
         id: posts.length + 1,
         title: `Post ${posts.length + 1}`,
         body: `This is post ${posts.length + 1}`
     };
-    createNewPost(newPost, getPosts);
+    console.log(`🆕 Preparing new post: ${JSON.stringify(newPost)}`);
+
+    createNewPost(newPost)
+        .then(post => {
+            console.log(`🎉 Promise resolved with post: ${post.title}`);
+            console.log('🔄 Calling getPosts to refresh the list...');
+            getPosts(list);
+        })
+        .catch(error => {
+            console.error(`❌ Promise rejected with error: ${error}`);
+        })
+        .finally(() => {
+            console.log('🏁 Post creation process completed');
+        });
 });
+
+export {getPosts, createNewPost, newPosts};
