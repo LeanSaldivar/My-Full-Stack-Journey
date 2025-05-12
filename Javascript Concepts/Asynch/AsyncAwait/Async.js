@@ -14,8 +14,6 @@ const list = document.createElement('ul');
 // Add the list container to the DOM
 document.body.appendChild(list);
 
-let newPosts;
-
 /**
  * Retrieves and displays posts with a deliberate delay to simulate API call
  * @param {HTMLElement} listElement - The DOM element to render posts into
@@ -42,13 +40,13 @@ function getPosts(listElement) {
  * @param {Object} post - The post object to be created
  * @returns {Promise} - Promise that resolves with the created post or rejects with an error
  */
-function createNewPost(post) {
+async function createNewPost(post) {
     console.log('📝 Creating new post...');
     console.log(`📊 Current post count: ${posts.length}`);
 
-    return new Promise((resolve, reject) => {
-        console.log('⏳ Promise initiated, waiting for post creation...');
+    console.log('⏳ Starting async operation, waiting for post creation...');
 
+    return new Promise((resolve, reject) => {
         setTimeout(() => {
             try {
                 posts.push(post);
@@ -84,7 +82,7 @@ hidePost.addEventListener('click', () => {
     list.innerHTML = '';
 });
 
-createPost.addEventListener('click', () => {
+createPost.addEventListener('click', async () => {
     console.log('🖱️ Create post button clicked');
     let newPost = {
         id: posts.length + 1,
@@ -93,18 +91,15 @@ createPost.addEventListener('click', () => {
     };
     console.log(`🆕 Preparing new post: ${JSON.stringify(newPost)}`);
 
-    createNewPost(newPost)
-        .then(post => {
-            console.log(`🎉 Promise resolved with post: ${post.title}`);
-            console.log('🔄 Calling getPosts to refresh the list...');
-            getPosts(list);
-        })
-        .catch(error => {
-            console.error(`❌ Promise rejected with error: ${error}`);
-        })
-        .finally(() => {
-            console.log('🏁 Post creation process completed');
-        });
+    try {
+        const post = await createNewPost(newPost);
+        console.log(`🎉 Async operation completed with post: ${post.title}`);
+        console.log('🔄 Calling getPosts to refresh the list...');
+        getPosts(list);
+    } catch (error) {
+        console.error(`❌ Async operation failed with error: ${error}`);
+    } finally {
+        console.log('🏁 Post creation process completed');
+    }
 });
 
-export {getPosts, createNewPost, newPosts};

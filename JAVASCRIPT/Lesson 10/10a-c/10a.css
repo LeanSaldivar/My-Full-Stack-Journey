@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+
+}
+
+:root {
+    --clr-Amazon: rgb(255, 216, 20);
+    --clr-Uber-dark: #000;
+    --clr-Uber-light: rgb(230, 230, 230);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.container, .buttons {
+    display: flex;
+
+    gap: 2rem;
+
+    margin: 1rem;
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0.8rem 1rem;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.amazon {
+    background-color: var(--clr-Amazon);
+    border-radius: 100px;
+}
+
+.Uber-dark, .Uber-light {
+    border-radius: 25px;
+}
+
+.Uber-dark {
+    background-color: var(--clr-Uber-dark);
+    color: var(--clr-Uber-light);
+}
+
+.Uber-light {
+    background-color: var(--clr-Uber-light);
+}

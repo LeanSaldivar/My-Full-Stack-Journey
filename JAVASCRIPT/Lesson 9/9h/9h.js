@@ -8,4 +8,4 @@ function getText() {
     text.textContent = type.value || "Start typing...";
 }
 
-type.addEventListener('keyup', (e) => getText())
+type.addEventListener('input', (e) => getText())

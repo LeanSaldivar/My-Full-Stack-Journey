@@ -2,7 +2,6 @@ let calculations = {
     input: '',
     output: ''
 };
-
 function addInput(input) {
     const calculator = document.getElementById('display');
     calculator.value += input;

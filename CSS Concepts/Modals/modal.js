@@ -5,7 +5,9 @@ const closeBtn = document.querySelector('#close-modal');
 openBtn.addEventListener('click', () => dialog.showModal())
 closeBtn.addEventListener('click', () => dialog.close())
 
-dialog.addEventListener('click', () => {
+
+
+dialog.addEventListener('click', (event) => {
     const rect = dialog.getBoundingClientRect();
     const isInDialog =
         event.clientX >= rect.left &&

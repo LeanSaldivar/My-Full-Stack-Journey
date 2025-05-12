@@ -1,0 +1,46 @@
+@use "Menu";
+$nav-bg: #f1f1f1;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+body {
+  font-family: system-ui;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+ul {
+  display: flex;
+  gap: 1em;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #777;
+  cursor: pointer;
+
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  background-color: $nav-bg;
+
+  margin: 1rem;
+}
+
+.nav-list {
+  padding: 1rem;
+}
+
+
